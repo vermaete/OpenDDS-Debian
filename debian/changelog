@@ -1,0 +1,5 @@
+opendds (3.13-1) unstable; urgency=medium
+
+  * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+
+ -- Fred Hornsey <hornseyf@objectcomputing.com>  Sat, 19 Jan 2019 17:26:19 -0600

@@ -1,0 +1,176 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: OpenDDS
+Source: opendds.org
+
+Files: *
+Copyright: 2005 Object Computing, Inc.
+License: OPENDDS
+ OpenDDS (Licensed Product) is protected by copyright, and is
+ distributed under the following terms.
+ .
+ OpenDDS is an open source implementation of the Object Management Group
+ (OMG) Data Distribution Service (DDS), developed and copyrighted by
+ Object Computing Incorporated (OCI). OpenDDS is both a multi-language
+ and multi-platform implementation. The OMG DDS specification is intended
+ to be suitable for systems whose requirements include real-time, high
+ volume, robustness, failure tolerant data distribution utilizing a
+ publish and subscribe model.
+ .
+ Since OpenDDS is open source and free of licensing fees, you are free
+ to use, modify, and distribute the source code, as long as you include
+ this copyright statement.
+ .
+ In particular, you can use OpenDDS to build proprietary software and
+ are under no obligation to redistribute any of your source code that
+ is built using OpenDDS. Note however, that you may not do anything to
+ the OpenDDS code, such as copyrighting it yourself or claiming
+ authorship of the OpenDDS code, that will prevent OpenDDS from being
+ distributed freely using an open source development model.
+ .
+ Warranty
+ .
+ LICENSED PRODUCT IS PROVIDED AS IS WITH NO WARRANTIES OF ANY KIND
+ INCLUDING THE WARRANTIES OF DESIGN, MERCHANTABILITY AND FITNESS FOR A
+ PARTICULAR PURPOSE, NON-INFRINGEMENT, OR ARISING FROM A COURSE OF
+ DEALING, USAGE OR TRADE PRACTICE.
+ .
+ Support
+ .
+ LICENSED PRODUCT IS PROVIDED WITH NO SUPPORT AND WITHOUT ANY
+ OBLIGATION ON THE PART OF OCI OR ANY OF ITS SUBSIDIARIES OR AFFILIATES
+ TO ASSIST IN ITS USE, CORRECTION, MODIFICATION OR ENHANCEMENT.
+ .
+ Support may be available from OCI to users who have agreed to a
+ support contract.
+ .
+ Liability
+ .
+ OCI OR ANY OF ITS SUBSIDIARIES OR AFFILIATES SHALL HAVE NO LIABILITY
+ WITH RESPECT TO THE INFRINGEMENT OF COPYRIGHTS, TRADE SECRETS OR ANY
+ PATENTS BY LICENSED PRODUCT OR ANY PART THEREOF.
+ .
+ IN NO EVENT WILL OCI OR ANY OF ITS SUBSIDIARIES OR AFFILIATES BE
+ LIABLE FOR ANY LOST REVENUE OR PROFITS OR OTHER SPECIAL, INDIRECT AND
+ CONSEQUENTIAL DAMAGES, EVEN IF OCI HAS BEEN ADVISED OF THE POSSIBILITY
+ OF SUCH DAMAGES.
+ .
+ OpenDDS copyright OCI. St. Louis MO USA, 2005
+
+Files: java/idl2jni/codegen/*
+Comment: Instance of the TAO IDL compiler
+Copyright: 1992, 1993, 1994 Sun Microsystems, Inc.
+License: SUNIDL
+
+Files: dds/idl/*
+Comment: Instance of the TAO IDL compiler
+Copyright: 1992, 1993, 1994 Sun Microsystems, Inc.
+License: SUNIDL
+
+License: SUNIDL
+ Copyright 1992, 1993, 1994 Sun Microsystems, Inc.  Printed in the United
+ States of America.  All Rights Reserved.
+ .
+ This product is protected by copyright and distributed under the following
+ license restricting its use.
+ .
+ The Interface Definition Language Compiler Front End (CFE) is made
+ available for your use provided that you include this license and copyright
+ notice on all media and documentation and the software program in which
+ this product is incorporated in whole or part. You may copy and extend
+ functionality (but may not remove functionality) of the Interface
+ Definition Language CFE without charge, but you are not authorized to
+ license or distribute it to anyone else except as part of a product or
+ program developed by you or with the express written consent of Sun
+ Microsystems, Inc. ("Sun").
+ .
+ The names of Sun Microsystems, Inc. and any of its subsidiaries or
+ affiliates may not be used in advertising or publicity pertaining to
+ distribution of Interface Definition Language CFE as permitted herein.
+ .
+ This license is effective until terminated by Sun for failure to comply
+ with this license.  Upon termination, you shall destroy or return all code
+ and documentation for the Interface Definition Language CFE.
+ .
+ INTERFACE DEFINITION LANGUAGE CFE IS PROVIDED AS IS WITH NO WARRANTIES OF
+ ANY KIND INCLUDING THE WARRANTIES OF DESIGN, MERCHANTIBILITY AND FITNESS
+ FOR A PARTICULAR PURPOSE, NONINFRINGEMENT, OR ARISING FROM A COURSE OF
+ DEALING, USAGE OR TRADE PRACTICE.
+ .
+ INTERFACE DEFINITION LANGUAGE CFE IS PROVIDED WITH NO SUPPORT AND WITHOUT
+ ANY OBLIGATION ON THE PART OF Sun OR ANY OF ITS SUBSIDIARIES OR AFFILIATES
+ TO ASSIST IN ITS USE, CORRECTION, MODIFICATION OR ENHANCEMENT.
+ .
+ SUN OR ANY OF ITS SUBSIDIARIES OR AFFILIATES SHALL HAVE NO LIABILITY WITH
+ RESPECT TO THE INFRINGEMENT OF COPYRIGHTS, TRADE SECRETS OR ANY PATENTS BY
+ INTERFACE DEFINITION LANGUAGE CFE OR ANY PART THEREOF.
+ .
+ IN NO EVENT WILL SUN OR ANY OF ITS SUBSIDIARIES OR AFFILIATES BE LIABLE FOR
+ ANY LOST REVENUE OR PROFITS OR OTHER SPECIAL, INDIRECT AND CONSEQUENTIAL
+ DAMAGES, EVEN IF SUN HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+ .
+ Use, duplication, or disclosure by the government is subject to
+ restrictions as set forth in subparagraph (c)(1)(ii) of the Rights in
+ Technical Data and Computer Software clause at DFARS 252.227-7013 and FAR
+ 52.227-19.
+ .
+ Sun, Sun Microsystems and the Sun logo are trademarks or registered
+ trademarks of Sun Microsystems, Inc.
+ .
+ SunSoft, Inc.
+ 2550 Garcia Avenue
+ Mountain View, California  94043
+ .
+ NOTE:
+ .
+ SunOS, SunSoft, Sun, Solaris, Sun Microsystems or the Sun logo are
+ trademarks or registered trademarks of Sun Microsystems, Inc.
+
+Files: dds/DCPS/yard
+Copyright: 2004 Christopher Diggins, 2006 Max Lybbert
+License: public-domain
+ YARD is all original work.  While it may rely on standard libraries, YARD does
+ not include code from other sources.  We have chosen to release our work as
+ public domain code.  This means that YARD has been released outside the
+ copyright system.  Feel free to use the code in any way you wish.
+ .
+ However, especially in an academic setting, plagiarism has very little to do
+ with copyright.  In an academic paper, or in any situation where you are
+ expected to give credit to other people's work, you will need to cite YARD as
+ a source.  The author is Christopher Diggins, and the appropriate date is
+ December 2004 -- the release date for Yard 1.0 (depending on your citation
+ format, you may also need to state which date you accessed the files).
+ .
+ While we welcome bug reports and feature requests, we can't make any promises
+ regarding whether YARD will do what you want, or whether we will make any
+ changes you ask for.  You are free to hire your own expert for that.
+ .
+ If you choose to distribute YARD commercially, you'll probably want to read up
+ on the laws covering warranties in your state, especially the implied
+ warranties of fitness for a particular use or merchantability.
+ .
+ .
+ Max Lybbert
+ 2006
+
+Files: debian/*
+Copyright: 2019 Fred Hornsey <hornseyf@objectcomputing.com>
+License: MIT
+ Copyright 2019 Fred Hornsey <hornseyf@objectcomputing.com>
+ .
+ Permission is hereby granted, free of charge, to any person obtaining a
+ copy of this software and associated documentation files (the "Software"),
+ to deal in the Software without restriction, including without limitation
+ the rights to use, copy, modify, merge, publish, distribute, sublicense,
+ and/or sell copies of the Software, and to permit persons to whom the
+ Software is furnished to do so, subject to the following conditions:
+ .
+ The above copyright notice and this permission notice shall be included
+ in all copies or substantial portions of the Software.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+ OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+ MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+ IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, 
+ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE 
+ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
