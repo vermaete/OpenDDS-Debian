@@ -6,13 +6,13 @@ Standards-Version: 4.1.2
 Section: libs
 Homepage: http://opendds.org
 
-Package: opendds-dev
-Section: libdevel
-Architecture: any
-Multi-Arch: same
-Depends: openddsBROKEN (= ${binary:Version}), ${misc:Depends}
-Description: An Open Source C++ DDS Implementation
- OpenDDS is an open source C++ implementation of the OMG's Data Distribution Service (DDS) Standards. It provides advanced network data sharing which can be filtered by arbitrary criteria. It is also compatible with other DDS systems via the RTPS standard and can be made secure by using the DDS Security standard.
+# Package: opendds-dev
+# Section: libdevel
+# Architecture: any
+# Multi-Arch: same
+# Depends: opendds (= ${binary:Version}), ${misc:Depends}
+# Description: An Open Source C++ DDS Implementation
+#  OpenDDS is an open source C++ implementation of the OMG's Data Distribution Service (DDS) Standards. It provides advanced network data sharing which can be filtered by arbitrary criteria. It is also compatible with other DDS systems via the RTPS standard and can be made secure by using the DDS Security standard.
 
 Package: opendds
 Architecture: any
