@@ -18,10 +18,13 @@ jobs:
     steps:
     - name: Checkout OpenDDS-Debian
       uses: actions/checkout@v2
+      with:
+        path: OpenDDS-Debian
     - name: Checkout OpenDDS
       uses: actions/checkout@v2
       with: 
         repository: 'objectcomputing/OpenDDS'
+        path: OpenDDS
     - name: List Files
       run: |
         pwd
