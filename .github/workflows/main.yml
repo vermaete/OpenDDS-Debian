@@ -26,7 +26,7 @@ jobs:
 
     - name: Checkout OpenDDS
       uses: actions/checkout@v2
-      with: 
+      with:
         repository: 'objectcomputing/OpenDDS'
         path: OpenDDS
 
@@ -40,8 +40,21 @@ jobs:
         cd ..
         cp opendds_*.deb opendds.deb
 
-    - name: Upload Results
-      uses: actions/upload-artifact@v1
+    - name: Commit New Deb
+      run: |
+        cd OpenDDS
+        SHA=$(git rev-parse HEAD)
+        cd ../OpenDDS-Debian
+        git checkout ubuntu_18_04
+        cp ../opendds.deb opendds.deb
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add opendds.deb
+        git commit -m "Based On OpenDDS $SHA"
+
+    - name: Push Commit
+      uses: ad-m/github-push-action@master
       with:
-        name: 'opendds.deb'
-        path: 'opendds.deb'
+        directory: 'OpenDDS-Debian'
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: 'ubuntu_18_04'
