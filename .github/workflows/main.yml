@@ -43,4 +43,5 @@ jobs:
     - name: Upload Results
       uses: actions/upload-artifact@v1
       with:
-        path: 'opendds*'
+        name: 'opendds.deb'
+        path: 'opendds.deb'
