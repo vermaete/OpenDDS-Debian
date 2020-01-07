@@ -26,7 +26,7 @@ jobs:
         repository: 'objectcomputing/OpenDDS'
         path: OpenDDS
     - name: Copy debian
-      run: cp OpenDDS-Debian/debian OpenDDS/debian
+      run: cp -r penDDS-Debian/debian OpenDDS/debian
     - name: Build Package
       working-directory: OpenDDS
       run: dpkg-buildpackage -us -uc
