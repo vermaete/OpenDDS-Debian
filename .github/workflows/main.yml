@@ -25,13 +25,11 @@ jobs:
       with: 
         repository: 'objectcomputing/OpenDDS'
         path: OpenDDS
-    - name: List Files
-      run: |
-        pwd
-        ls -al
-    # - name: Build Package
-    #   working-directory: OpenDDS
-    #   run: dpkg-buildpackage -us -uc
+    - name: Copy debian
+      run: cp OpenDDS-Debian/debian OpenDDS/debian
+    - name: Build Package
+      working-directory: OpenDDS
+      run: dpkg-buildpackage -us -uc
     # - name: github-action-publish-binaries
     #   uses: skx/github-action-publish-binaries@release-1.3
     #   env:
