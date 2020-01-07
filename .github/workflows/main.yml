@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - master
+  schedule:
+    - cron: "0 2 * * 5"
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+
+    env:
+      DEBFULLNAME: "Fred Hornsey"
+      DEBEMAIL: "hornseyf@objectcomputing.com"
+
+    steps:
+    - name: Checkout OpenDDS-Debian
+      uses: actions/checkout@v2
+    - name: Checkout OpenDDS
+      uses: actions/checkout@v2
+      with: 
+        repository: 'objectcomputing/OpenDDS'
+    - name: Copy debian Directory
+      run: cp OpenDDS-Debian/debian OpenDDS/debian
+    - name: Build Package
+      working-directory: OpenDDS
+      run: dpkg-buildpackage -us -uc
+    # - name: github-action-publish-binaries
+    #   uses: skx/github-action-publish-binaries@release-1.3
+    #   env:
+    #      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    #   with:
+    #     args: 
+    #       OpenDDS/opendds_*.deb
