@@ -45,7 +45,7 @@ jobs:
         cd OpenDDS
         SHA=$(git rev-parse HEAD)
         cd ../OpenDDS-Debian
-        git checkout ubuntu_18_04
+        git checkout -b ubuntu_18_04 --track origin/ubuntu_18_04
         cp ../opendds.deb opendds.deb
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
