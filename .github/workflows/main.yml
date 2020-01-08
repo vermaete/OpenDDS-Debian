@@ -17,7 +17,7 @@ jobs:
 
     steps:
     - name: Install Ubuntu Packages
-      run: sudo apt-get install debhelper
+      run: sudo apt-get install debhelper lintian
 
     - name: Checkout OpenDDS-Debian
       uses: actions/checkout@v2
@@ -58,3 +58,7 @@ jobs:
         directory: 'OpenDDS-Debian'
         github_token: ${{ secrets.GITHUB_TOKEN }}
         branch: 'ubuntu_18_04'
+
+    - name: Lintian
+      run: lintian --pedantic --info --display-info opendds.deb
+      if: always()
