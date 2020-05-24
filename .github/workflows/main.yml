@@ -43,14 +43,15 @@ jobs:
     - name: Commit New Deb
       run: |
         cd OpenDDS
-        SHA=$(git rev-parse HEAD)
+        SHA=$(git rev-parse --short HEAD)
         cd ../OpenDDS-Debian
         git checkout -b ubuntu_18_04 --track origin/ubuntu_18_04
         cp ../opendds.deb opendds.deb
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
         git add opendds.deb
-        git commit -m "Based On OpenDDS $SHA"
+        git \
+          -c 'user.email=actions@github.com' \
+          -c 'user.name=GitHub Actions' \
+          commit -m "Based On OpenDDS $SHA"
 
     - name: Push Commit
       uses: ad-m/github-push-action@master
