@@ -45,7 +45,9 @@ jobs:
         cd OpenDDS
         SHA=$(git rev-parse --short HEAD)
         cd ../OpenDDS-Debian
-        git checkout -b ubuntu_18_04 --track origin/ubuntu_18_04
+        git config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"
+        git fetch --depth 1 origin ubuntu_18_04
+        git checkout ubuntu_18_04
         cp ../opendds.deb opendds.deb
         git add opendds.deb
         git \
