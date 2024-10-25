@@ -30,7 +30,7 @@ jobs:
     - name: Checkout OpenDDS
       uses: actions/checkout@v4
       with:
-        repository: 'objectcomputing/OpenDDS'
+        repository: 'OpenDDS/OpenDDS'
         path: OpenDDS
 
     - name: Copy debian Directory
