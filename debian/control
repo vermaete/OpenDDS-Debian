@@ -1,8 +1,8 @@
 Source: opendds
 Priority: optional
 Maintainer: Fred Hornsey <hornseyf@objectcomputing.com>
-Build-Depends: debhelper (>= 10), perl (>= 5.26)
-Standards-Version: 4.1.2
+Build-Depends: debhelper-compat (= 13), perl (>= 5.26), build-essential
+Standards-Version: 4.7.0
 Section: libs
 Homepage: http://opendds.org
 

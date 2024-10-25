@@ -3,14 +3,14 @@ name: CI
 on:
   push:
     branches:
-      - master
+      - vermaete/ubuntu2404
   workflow_dispatch:
   schedule:
     - cron: "0 2 * * 5"
 
 jobs:
   build:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-24.04
 
     env:
       DEBFULLNAME: "Fred Hornsey"
@@ -20,12 +20,13 @@ jobs:
     - name: Install Ubuntu Packages
       run: |
         sudo apt-get update
-        sudo apt-get install debhelper lintian
+        sudo apt-get install debhelper lintian build-essential
 
     - name: Checkout OpenDDS-Debian
       uses: actions/checkout@v4
       with:
         path: OpenDDS-Debian
+        ref: 'vermaete/ubuntu2404'
 
     - name: Checkout OpenDDS
       uses: actions/checkout@v4
@@ -50,8 +51,8 @@ jobs:
         SHA=$(git rev-parse --short HEAD)
         cd ../OpenDDS-Debian
         git config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"
-        git fetch --depth 1 origin ubuntu_20_04
-        git checkout ubuntu_20_04
+        git fetch --depth 1 origin ubuntu_24_04
+        git checkout ubuntu_24_04
         cp ../opendds.deb opendds.deb
         git add opendds.deb
         git \
@@ -64,7 +65,7 @@ jobs:
       with:
         directory: 'OpenDDS-Debian'
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: 'ubuntu_20_04'
+        branch: 'ubuntu_24_04'
 
     - name: Lintian
       run: lintian --pedantic --info --display-info opendds.deb
