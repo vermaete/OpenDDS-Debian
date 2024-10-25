@@ -32,6 +32,7 @@ jobs:
       with:
         repository: 'OpenDDS/OpenDDS'
         path: OpenDDS
+        ref: 'DDS-3.30'
 
     - name: Copy debian Directory
       run: cp -r OpenDDS-Debian/debian OpenDDS/debian
