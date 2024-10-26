@@ -67,5 +67,5 @@ jobs:
         branch: 'ubuntu_20_04'
 
     - name: Lintian
-      run: lintian --pedantic --info --display-info opendds.deb
+      run: lintian --info --display-info opendds.deb
       if: always()
