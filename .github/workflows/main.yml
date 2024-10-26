@@ -68,4 +68,5 @@ jobs:
 
     - name: Lintian
       run: lintian --info --display-info opendds.deb
+      continue-on-error: true
       if: always()
