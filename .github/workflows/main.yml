@@ -20,7 +20,7 @@ jobs:
     - name: Install Ubuntu Packages
       run: |
         sudo apt-get update
-        sudo apt-get install debhelper lintian
+        sudo apt-get install debhelper lintian qtbase5-dev
 
     - name: Checkout OpenDDS-Debian
       uses: actions/checkout@v4
